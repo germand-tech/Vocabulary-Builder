@@ -1,6 +1,21 @@
 // URL oficial de tu base de datos JSON en GitHub Pages
 const GITHUB_JSON_URL = "https://germand-tech.github.io/Vocabulary-Builder/vocabulary.json";
 
+// Cargar librerías necesarias dinámicamente si no están presentes
+function loadExternalScripts() {
+  if (typeof QRCode === 'undefined') {
+    const scriptQR = document.createElement('script');
+    scriptQR.src = "https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js";
+    document.head.appendChild(scriptQR);
+  }
+  if (typeof html2canvas === 'undefined') {
+    const scriptCanvas = document.createElement('script');
+    scriptCanvas.src = "https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js";
+    document.head.appendChild(scriptCanvas);
+  }
+}
+loadExternalScripts();
+
 // 1. Detectar Level y Unit desde la URL de Moodle
 function getLevelAndUnitFromURL() {
   const currentURL = window.location.href;
@@ -930,9 +945,7 @@ function finishTest() {
   if (activeTestId < 6) testsData[activeTestId + 1].unlocked = true;
   renderTestNav();
 
-  const completedCount = Object.values(testsData).filter(t => t.completed).length;
-
-  if (activeTestId === 6 || completedCount >= 6) {
+  if (activeTestId === 6) {
     generateCertificate();
     return;
   }
