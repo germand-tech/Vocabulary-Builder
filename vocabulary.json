@@ -1,0 +1,18 @@
+{
+  "1-1": [
+    { "en": "First name", "es": "Primer nombre", "category": "Personal Info" },
+    { "en": "Last name", "es": "Apellido", "category": "Personal Info" },
+    { "en": "Phone number", "es": "Número de teléfono", "category": "Personal Info" },
+    { "en": "Mr.", "es": "Señor (Sr.)", "category": "Titles", "audio": "Mister" },
+    { "en": "Mrs.", "es": "Señora (Sra. casada)", "category": "Titles", "audio": "Missus" },
+    { "en": "Hello", "es": "Hola", "category": "Greetings" },
+    { "en": "Good morning", "es": "Buenos días", "category": "Greetings" }
+  ],
+  "1-2": [
+    { "en": "Apple", "es": "Manzana", "category": "Food" },
+    { "en": "Banana", "es": "Banana", "category": "Food" }
+  ],
+  "14-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ]
+}
