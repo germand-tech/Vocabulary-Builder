@@ -57,6 +57,12 @@ body.dark-mode .card-back {
 
 body.dark-mode .card-tag { color: #38bdf8 !important; }
 
+body.dark-mode .match-card.selected {
+  background-color: #3730a3 !important;
+  border-color: #818cf8 !important;
+  color: #ffffff !important;
+}
+
 * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
 body { background-color: var(--bg); color: var(--text); display: flex; flex-direction: column; min-height: 100vh; position: relative; }
 
