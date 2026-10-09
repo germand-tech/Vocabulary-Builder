@@ -825,6 +825,7 @@ async function testRecordOral(targetEnglish) {
   const status = document.getElementById('testOralStatus');
   const micBtn = document.getElementById('oralTestMicBtn');
   const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+  const item = currentTestCards[currentTestItemIdx];
 
   if (!SpeechRecognition) { status.innerHTML = "❌ Browser not supported."; return; }
 
@@ -855,6 +856,12 @@ async function testRecordOral(targetEnglish) {
       status.style.color = "var(--danger)";
       status.innerText = `❌ Heard: "${rawSpoken}". Expected: "${targetEnglish}"`;
       playSound('wrong');
+
+      testsData[activeTestId].wrongAnswers.push({
+        question: item.es,
+        expected: targetEnglish,
+        userVal: rawSpoken || '(Inaudible)'
+      });
     }
   };
 
@@ -868,6 +875,14 @@ async function testRecordOral(targetEnglish) {
 function forceOralPass(targetEnglish) {
   stopActiveRecognition();
   testsData[activeTestId].manualPasses++;
+  const item = currentTestCards[currentTestItemIdx];
+  
+  testsData[activeTestId].wrongAnswers.push({
+    question: item.es,
+    expected: targetEnglish,
+    userVal: '[Manual Override / Skipped]'
+  });
+
   currentTestItemIdx++;
   renderTestQuestion();
 }
@@ -880,6 +895,7 @@ function testCheckSpelling(targetEnglish) {
   const inputRaw = inputEl.value;
   const input = normalizeText(inputRaw);
   const target = normalizeText(targetEnglish);
+  const item = currentTestCards[currentTestItemIdx];
 
   inputEl.disabled = true;
 
@@ -893,6 +909,13 @@ function testCheckSpelling(targetEnglish) {
     playSound('wrong');
     feedbackEl.style.color = "var(--danger)";
     feedbackEl.innerHTML = `❌ Incorrect! You wrote: "<b>${inputRaw.trim() || '(Empty)'}</b>" | Correct: "<b>${targetEnglish}</b>"`;
+
+    testsData[activeTestId].wrongAnswers.push({
+      question: item.audio || item.en,
+      expected: targetEnglish,
+      userVal: inputRaw.trim() || '(Empty)'
+    });
+
     setTimeout(() => { currentTestItemIdx++; renderTestQuestion(); }, 2500);
   }
 }
@@ -907,6 +930,13 @@ function finishTest() {
   if (activeTestId < 6) testsData[activeTestId + 1].unlocked = true;
   renderTestNav();
 
+  const allCompleted = Object.values(testsData).every(t => t.completed);
+
+  if (allCompleted) {
+    generateCertificate();
+    return;
+  }
+
   box.innerHTML = `
     <div style="padding: 2rem; text-align: center;">
       <h2>Test Completed: ${test.title}</h2>
@@ -917,6 +947,182 @@ function finishTest() {
       </div>
     </div>
   `;
+}
+
+function generateCertificate() {
+  let attemptsSummaryHTML = "";
+  let totalManualPasses = 0;
+  let totalPointsAccumulated = 0;
+  let allWrongAnswers = [];
+
+  for (let i = 1; i <= 6; i++) {
+    const test = testsData[i];
+    const att = test.attempts;
+    const man = test.manualPasses || 0;
+    const score = test.score || 0;
+    totalPointsAccumulated += score;
+    totalManualPasses += man;
+    const typeLabel = test.type === 'oral' ? 'Oral' : 'Spelling';
+    
+    const manBadgeHTML = man > 0 ? ` <span style="color:var(--warning); font-size:0.85rem; font-weight:600;">(⚠️ ${man} manual pass/skipped)</span>` : '';
+
+    attemptsSummaryHTML += `<li>Test ${i} (${typeLabel}): <b>${score}/100 pts</b> (${att} ${att === 1 ? 'attempt' : 'attempts'})${manBadgeHTML}</li>`;
+
+    if (test.wrongAnswers && test.wrongAnswers.length > 0) {
+      test.wrongAnswers.forEach(w => {
+        allWrongAnswers.push({ testId: i, type: typeLabel, ...w });
+      });
+    }
+  }
+
+  const finalAverageGrade = Math.round(totalPointsAccumulated / 6);
+
+  const methodText = totalManualPasses > 0 
+    ? `Speech AI + Manual Pass (${totalManualPasses} items skipped)`
+    : `100% Automated Speech AI & Spelling`;
+
+  const methodHTML = totalManualPasses > 0 
+    ? `<span style="color: var(--warning); font-weight:600;">Speech AI + Manual Pass (${totalManualPasses} item${totalManualPasses > 1 ? 's' : ''} skipped)</span>`
+    : `<span style="color: var(--success); font-weight:600;">100% Automated Speech AI & Spelling</span>`;
+
+  let incorrectSectionHTML = "";
+
+  if (allWrongAnswers.length > 0) {
+    let tableRowsHTML = "";
+    allWrongAnswers.forEach((w) => {
+      tableRowsHTML += `
+        <tr>
+          <td>Test ${w.testId} (${w.type})</td>
+          <td><b>${w.question}</b></td>
+          <td style="color: var(--danger); font-weight: 500;">${w.userVal}</td>
+          <td style="color: var(--success); font-weight: 600;">${w.expected}</td>
+        </tr>
+      `;
+    });
+
+    incorrectSectionHTML = `
+      <div class="incorrect-box">
+        <h4>⚠️ Incorrect Answers & Manual Passes Logged (${allWrongAnswers.length}):</h4>
+        <table class="incorrect-table">
+          <thead>
+            <tr>
+              <th>Evaluation</th>
+              <th>Prompt/Word</th>
+              <th>Given Answer</th>
+              <th>Correct Answer</th>
+            </tr>
+          </thead>
+          <tbody>
+            ${tableRowsHTML}
+          </tbody>
+        </table>
+      </div>
+    `;
+  } else {
+    incorrectSectionHTML = `
+      <div class="incorrect-box" style="background: #f0fdf4; border-color: #bbf7d0;">
+        <h4 style="color: #166534;">🌟 Perfect Record: Zero incorrect answers registered in final runs!</h4>
+      </div>
+    `;
+  }
+
+  const box = document.getElementById('testBox');
+  
+  box.innerHTML = `
+    <div class="cert-card" id="certCardElem">
+      <h2>CERTIFICATE OF ACHIEVEMENT</h2>
+      <div class="cert-subtitle">${studentInfo.level}</div>
+      
+      <div class="cert-info">
+        <p><b>Course / Unit:</b> ${studentInfo.level}</p>
+        <p><b>Student Name:</b> ${studentInfo.name}</p>
+        <p><b>Student ID Code:</b> ${studentInfo.id}</p>
+        <p><b>Issue Date:</b> ${studentInfo.date}</p>
+        <p><b>Final Average Grade:</b> <span style="color: ${finalAverageGrade >= 70 ? 'var(--success)' : 'var(--warning)'}; font-weight:700;">${finalAverageGrade} / 100 pts</span></p>
+        <p><b>Evaluation Method:</b> ${methodHTML}</p>
+        <p><b>Evaluations Completed:</b> 6 Practice Tests (3 Oral, 3 Spelling)</p>
+        <br>
+        <p><b>Score & Attempt Breakdown per Evaluation:</b></p>
+        <ul style="padding-left: 1.2rem; margin-top: 0.3rem;">
+          ${attemptsSummaryHTML}
+        </ul>
+      </div>
+
+      <div class="cert-qr" id="qrcodeContainer"></div>
+      <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 0.8rem;">Scan this QR code to verify official certification details.</p>
+
+      <div id="certActionBtns" style="margin-top: 1.8rem; display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+        <button class="btn btn-primary" style="background: var(--success);" onclick="downloadCertificatePNG()">📥 Download Certificate (PNG)</button>
+        <button class="btn btn-outline" onclick="window.print()">🖨️ Print / Save as PDF</button>
+      </div>
+    </div>
+
+    <div class="screen-only-errors">
+      ${incorrectSectionHTML}
+    </div>
+  `;
+
+  const qrPayload = 
+`CERTIFICATE OF ACHIEVEMENT
+Student: ${studentInfo.name}
+ID Code: ${studentInfo.id}
+Course: ${studentInfo.level}
+Date: ${studentInfo.date}
+Grade: ${finalAverageGrade}/100 pts
+Method: ${methodText}
+Status: VERIFIED`;
+
+  const qrContainer = document.getElementById("qrcodeContainer");
+  qrContainer.innerHTML = "";
+
+  let qrRendered = false;
+
+  if (typeof QRCode !== "undefined") {
+    try {
+      new QRCode(qrContainer, {
+        text: qrPayload,
+        width: 180,
+        height: 180,
+        colorDark: "#3730a3",
+        colorLight: "#ffffff",
+        correctLevel: QRCode.CorrectLevel.M
+      });
+      qrRendered = true;
+    } catch(e) {}
+  }
+
+  if (!qrRendered || qrContainer.children.length === 0) {
+    qrContainer.innerHTML = `<img src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&data=${encodeURIComponent(qrPayload)}" alt="Verification QR Code" style="width:180px; height:180px; border-radius:8px; border:2px solid #3730a3;" />`;
+  }
+
+  if (finalAverageGrade === 100 && totalManualPasses === 0) {
+    triggerConfetti();
+  }
+}
+
+function downloadCertificatePNG() {
+  const certNode = document.getElementById('certCardElem');
+  const actionBtns = document.getElementById('certActionBtns');
+  if (actionBtns) actionBtns.style.display = 'none';
+
+  if (typeof html2canvas !== "undefined") {
+    html2canvas(certNode, {
+      scale: 2,
+      backgroundColor: '#ffffff',
+      useCORS: true
+    }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = `Certificate_${studentInfo.name.replace(/\s+/g, '_')}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      if (actionBtns) actionBtns.style.display = 'flex';
+    }).catch(() => {
+      if (actionBtns) actionBtns.style.display = 'flex';
+      window.print();
+    });
+  } else {
+    window.print();
+  }
 }
 
 function loadNextUnlockedTest() {
