@@ -930,9 +930,9 @@ function finishTest() {
   if (activeTestId < 6) testsData[activeTestId + 1].unlocked = true;
   renderTestNav();
 
-  const allCompleted = Object.values(testsData).every(t => t.completed);
+  const completedCount = Object.values(testsData).filter(t => t.completed).length;
 
-  if (allCompleted) {
+  if (activeTestId === 6 || completedCount >= 6) {
     generateCertificate();
     return;
   }
@@ -949,6 +949,16 @@ function finishTest() {
   `;
 }
 
+function loadNextUnlockedTest() {
+  if (activeTestId < 6) {
+    activeTestId++;
+    renderTestNav();
+    loadTest(activeTestId);
+  } else {
+    generateCertificate();
+  }
+}
+
 function generateCertificate() {
   let attemptsSummaryHTML = "";
   let totalManualPasses = 0;
@@ -957,7 +967,7 @@ function generateCertificate() {
 
   for (let i = 1; i <= 6; i++) {
     const test = testsData[i];
-    const att = test.attempts;
+    const att = test.attempts || 1;
     const man = test.manualPasses || 0;
     const score = test.score || 0;
     totalPointsAccumulated += score;
@@ -1031,13 +1041,13 @@ function generateCertificate() {
   box.innerHTML = `
     <div class="cert-card" id="certCardElem">
       <h2>CERTIFICATE OF ACHIEVEMENT</h2>
-      <div class="cert-subtitle">${studentInfo.level}</div>
+      <div class="cert-subtitle">${studentInfo ? studentInfo.level : 'Level Practice'}</div>
       
       <div class="cert-info">
-        <p><b>Course / Unit:</b> ${studentInfo.level}</p>
-        <p><b>Student Name:</b> ${studentInfo.name}</p>
-        <p><b>Student ID Code:</b> ${studentInfo.id}</p>
-        <p><b>Issue Date:</b> ${studentInfo.date}</p>
+        <p><b>Course / Unit:</b> ${studentInfo ? studentInfo.level : 'Level Practice'}</p>
+        <p><b>Student Name:</b> ${studentInfo ? studentInfo.name : 'Student'}</p>
+        <p><b>Student ID Code:</b> ${studentInfo ? studentInfo.id : 'N/A'}</p>
+        <p><b>Issue Date:</b> ${studentInfo ? studentInfo.date : new Date().toLocaleDateString()}</p>
         <p><b>Final Average Grade:</b> <span style="color: ${finalAverageGrade >= 70 ? 'var(--success)' : 'var(--warning)'}; font-weight:700;">${finalAverageGrade} / 100 pts</span></p>
         <p><b>Evaluation Method:</b> ${methodHTML}</p>
         <p><b>Evaluations Completed:</b> 6 Practice Tests (3 Oral, 3 Spelling)</p>
@@ -1064,10 +1074,10 @@ function generateCertificate() {
 
   const qrPayload = 
 `CERTIFICATE OF ACHIEVEMENT
-Student: ${studentInfo.name}
-ID Code: ${studentInfo.id}
-Course: ${studentInfo.level}
-Date: ${studentInfo.date}
+Student: ${studentInfo ? studentInfo.name : 'Student'}
+ID Code: ${studentInfo ? studentInfo.id : 'N/A'}
+Course: ${studentInfo ? studentInfo.level : 'Level Practice'}
+Date: ${studentInfo ? studentInfo.date : new Date().toLocaleDateString()}
 Grade: ${finalAverageGrade}/100 pts
 Method: ${methodText}
 Status: VERIFIED`;
@@ -1112,7 +1122,7 @@ function downloadCertificatePNG() {
       useCORS: true
     }).then(canvas => {
       const link = document.createElement('a');
-      link.download = `Certificate_${studentInfo.name.replace(/\s+/g, '_')}.png`;
+      link.download = `Certificate_${studentInfo ? studentInfo.name.replace(/\s+/g, '_') : 'Student'}.png`;
       link.href = canvas.toDataURL('image/png');
       link.click();
       if (actionBtns) actionBtns.style.display = 'flex';
@@ -1123,10 +1133,6 @@ function downloadCertificatePNG() {
   } else {
     window.print();
   }
-}
-
-function loadNextUnlockedTest() {
-  if (activeTestId < 6) { activeTestId++; renderTestNav(); loadTest(activeTestId); }
 }
 
 window.addEventListener('DOMContentLoaded', initApp);
