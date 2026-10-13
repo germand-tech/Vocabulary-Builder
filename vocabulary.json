@@ -1,5 +1,5 @@
 {
-  "3-1": [
+  "1-1": [
     { "en": "First name", "es": "Primer nombre", "category": "Personal Info" },
     { "en": "Last name", "es": "Apellido", "category": "Personal Info" },
     { "en": "Phone number", "es": "Número de teléfono", "category": "Personal Info" },
