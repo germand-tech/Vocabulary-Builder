@@ -20,15 +20,18 @@ loadExternalScripts();
 function getLevelAndUnitFromURL() {
   const currentURL = window.location.href;
   
-  const match = currentURL.match(/Level%20(\d+)%20Unit%20(\d+)/i) || 
-                currentURL.match(/Level\s*(\d+)\s*Unit\s*(\d+)/i);
+  // Acepta letras y números para el nivel (\w+) y números para la unidad (\d+)
+  const match = currentURL.match(/Level%20([a-zA-Z0-9]+)%20Unit%20(\d+)/i) || 
+                currentURL.match(/Level\s*([a-zA-Z0-9]+)\s*Unit\s*(\d+)/i);
 
   if (match) {
-    return { level: match[1], unit: match[2], key: `${match[1]}-${match[2]}` };
+    const levelStr = match[1].toUpperCase(); // Convierte a mayúsculas ("a1" -> "A1")
+    const unitStr = match[2];
+    return { level: levelStr, unit: unitStr, key: `${levelStr}-${unitStr}` };
   }
   
-  console.warn("No se detectó Level/Unit en la URL. Usando 1-1 por defecto.");
-  return { level: "1", unit: "1", key: "1-1" };
+  console.warn("No se detectó Level/Unit en la URL. Usando A1-1 por defecto.");
+  return { level: "A1", unit: "1", key: "A1-1" };
 }
 
 let fullVocabulary = [];
