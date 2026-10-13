@@ -286,7 +286,667 @@
     { "en": "Blanket", "es": "Manta / Cobija", "category": "Furniture and household objects" },
     { "en": "Frying pan", "es": "Sartén", "category": "Furniture and household objects" }
   ],
+  "1-4": [
+    { "en": "Laptop", "es": "Computadora portátil / Laptop", "category": "Electronic Products" },
+    { "en": "Videogame console", "es": "Consola de videojuegos", "category": "Electronic Products" },
+    { "en": "Cellphone", "es": "Teléfono celular", "category": "Electronic Products" },
+    { "en": "Computer", "es": "Computadora", "category": "Electronic Products" },
+    { "en": "Flash drive", "es": "Memoria USB / Pendrive", "category": "Electronic Products" },
+    { "en": "Speakers", "es": "Altavoces / Parlantes", "category": "Electronic Products" },
+    { "en": "Keyboard", "es": "Teclado", "category": "Electronic Products" },
+    { "en": "Printer", "es": "Impresora", "category": "Electronic Products" },
+    { "en": "Headphones", "es": "Audífonos / Auriculares", "category": "Electronic Products" },
+    { "en": "Calculator", "es": "Calculadora", "category": "Electronic Products" },
+    { "en": "Radio", "es": "Radio", "category": "Electronic Products" },
+    { "en": "Tablet", "es": "Tableta / Tablet", "category": "Electronic Products" },
+    { "en": "Camera", "es": "Cámara", "category": "Electronic Products" },
+    { "en": "Book", "es": "Libro", "category": "Personal Possessions" },
+    { "en": "Pen", "es": "Bolígrafo / Lapicero", "category": "Personal Possessions" },
+    { "en": "Watch", "es": "Reloj de pulsera", "category": "Personal Possessions" },
+    { "en": "Backpack", "es": "Mochila", "category": "Personal Possessions" },
+    { "en": "Glasses", "es": "Gafas / Lentes", "category": "Personal Possessions" },
+    { "en": "Handbag", "es": "Bolso de mano / Cartera", "category": "Personal Possessions" },
+    { "en": "Wallet", "es": "Billetera / Cartera", "category": "Personal Possessions" },
+    { "en": "Ring", "es": "Anillo", "category": "Personal Possessions" },
+    { "en": "Keys", "es": "Llaves", "category": "Personal Possessions" },
+    { "en": "Necklace", "es": "Collar", "category": "Personal Possessions" },
+    { "en": "Dictionary", "es": "Diccionario", "category": "Personal Possessions" },
+    { "en": "Notebook", "es": "Cuaderno / Libreta", "category": "Personal Possessions" },
+    { "en": "Pencil", "es": "Lápiz", "category": "Personal Possessions" },
+    { "en": "Eraser", "es": "Borrador / Goma de borrar", "category": "Personal Possessions" },
+    { "en": "Bracelet", "es": "Pulsera / Brazalete", "category": "Personal Possessions" },
+    { "en": "Earrings", "es": "Aretes / Pendientes", "category": "Personal Possessions" },
+    { "en": "ID card", "es": "Documento de identidad / Cédula", "category": "Personal Possessions" },
+    { "en": "Cellphone", "es": "Teléfono celular", "category": "Personal Possessions" },
+    { "en": "Money", "es": "Dinero", "category": "Personal Possessions" },
+    { "en": "Sharpener", "es": "Sacapuntas", "category": "Personal Possessions" },
+    { "en": "Water bottle", "es": "Botella de agua", "category": "Personal Possessions" },
+    { "en": "Car key", "es": "Llave del auto", "category": "Personal Possessions" }
+  ],
+  ,
+  "2-1": [
+    { "en": "Get up", "es": "Levantarse", "category": "Daily activities" },
+    { "en": "Take a shower", "es": "Tomar una ducha / Ducharse", "category": "Daily activities" },
+    { "en": "Start work", "es": "Comenzar a trabajar / Empezar a trabajar", "category": "Daily activities" },
+    { "en": "Take a nap", "es": "Tomar una siesta", "category": "Daily activities" },
+    { "en": "Go to bed", "es": "Ir a la cama / Acostarse", "category": "Daily activities" },
+    { "en": "Have breakfast", "es": "Desayunar", "category": "Daily activities" },
+    { "en": "Have lunch", "es": "Almorzar", "category": "Daily activities" },
+    { "en": "Have dinner", "es": "Cenar", "category": "Daily activities" },
+    { "en": "Cook", "es": "Cocinar", "category": "Daily activities" },
+    { "en": "Clean the house", "es": "Limpiar la casa", "category": "Daily activities" },
+    { "en": "Get dressed", "es": "Vestirse", "category": "Daily activities" },
+    { "en": "Brush my teeth", "es": "Cepillarme los dientes / Lavarme los dientes", "category": "Daily activities" },
+    { "en": "Take public transportation", "es": "Tomar el transporte público", "category": "Daily activities" },
+    { "en": "Watch TV", "es": "Ver televisión / Ver TV", "category": "Daily activities" },
+    { "en": "Go shopping", "es": "Ir de compras", "category": "Daily activities" },
+    { "en": "Go to work", "es": "Ir al trabajo", "category": "Daily activities" },
+    { "en": "Go back home", "es": "Regresar a casa / Volver a casa", "category": "Daily activities" },
+    { "en": "What time is it?", "es": "¿Qué hora es?", "category": "Tell time" },
+    { "en": "It's four o'clock.", "es": "Son las cuatro en punto.", "category": "Tell time" },
+    { "en": "It's five o'clock.", "es": "Son las cinco en punto.", "category": "Tell time" },
+    { "en": "It's five thirty.", "es": "Son las cinco y media / Son las cinco y treinta.", "category": "Tell time" },
+    { "en": "It's half past five (5:30)", "es": "Son las cinco y media (5:30).", "category": "Tell time" },
+    { "en": "It's five forty-five", "es": "Son las cinco y cuarenta y cinco.", "category": "Tell time" },
+    { "en": "It's six o'clock.", "es": "Son las seis en punto.", "category": "Tell time" },
+    { "en": "It's six fifteen.", "es": "Son las seis y quince.", "category": "Tell time" },
+    { "en": "It's a quarter after six.", "es": "Son las seis y cuarto.", "category": "Tell time" },
+    { "en": "I get up at 6 o'clock", "es": "Me levanto a las 6 en punto.", "category": "Tell time" },
+    { "en": "6:00 am", "es": "6:00 a.m.", "category": "Tell time" },
+    { "en": "6:00 pm", "es": "6:00 p.m.", "category": "Tell time" },
+    { "en": "Every day", "es": "Todos los días", "category": "Tell time" },
+    { "en": "I work every day.", "es": "Trabajo todos los días.", "category": "Tell time" },
+    { "en": "Every morning", "es": "Todas las mañanas", "category": "Tell time" },
+    { "en": "Every afternoon", "es": "Todas las tardes", "category": "Tell time" },
+    { "en": "Every evening", "es": "Todas las noches", "category": "Tell time" },
+    { "en": "at 3:00 am", "es": "A las 3:00 a.m.", "category": "Tell time" },
+    { "en": "at 7 pm", "es": "A las 7 p.m.", "category": "Tell time" },
+    { "en": "I have breakfast at 8:00.", "es": "Desayuno a las 8:00.", "category": "Tell time" },
+    { "en": "In the morning...", "es": "Por la mañana...", "category": "Tell time" },
+    { "en": "I get dressed in the morning", "es": "Me visto por la mañana.", "category": "Tell time" },
+    { "en": "In the afternoon...", "es": "Por la tarde...", "category": "Tell time" },
+    { "en": "In the evening...", "es": "Por la noche...", "category": "Tell time" },
+    { "en": "On Sunday", "es": "El domingo", "category": "Tell time" },
+    { "en": "I clean the house on Sundays", "es": "Limpio la casa los domingos.", "category": "Tell time" },
+    { "en": "Go to class", "es": "Ir a clase", "category": "Professional Activities" },
+    { "en": "Take a test", "es": "Tomar un examen / Hacer una prueba", "category": "Professional Activities" },
+    { "en": "Go to the library", "es": "Ir a la biblioteca", "category": "Professional Activities" },
+    { "en": "Do homework", "es": "Hacer la tarea", "category": "Professional Activities" },
+    { "en": "Talk to teachers", "es": "Hablar con los profesores", "category": "Professional Activities" },
+    { "en": "Talk to classmates", "es": "Hablar con los compañeros de clase", "category": "Professional Activities" },
+    { "en": "Write compositions", "es": "Escribir composiciones / Redacciones", "category": "Professional Activities" },
+    { "en": "Check emails", "es": "Revisar los correos electrónicos", "category": "Professional Activities" },
+    { "en": "Meet clients", "es": "Reunirse con clientes / Conocer clientes", "category": "Professional Activities" },
+    { "en": "Go to meetings", "es": "Ir a reuniones", "category": "Professional Activities" },
+    { "en": "Travel", "es": "Viajar", "category": "Professional Activities" },
+    { "en": "Talk to people on the phone", "es": "Hablar con personas por teléfono", "category": "Professional Activities" },
+    { "en": "Make copies", "es": "Sacar copias / Hacer fotocopias", "category": "Professional Activities" },
+    { "en": "Go to the bank", "es": "Ir al banco", "category": "Professional Activities" },
+    { "en": "Fill out forms", "es": "Llenar formularios / Completa formularios", "category": "Professional Activities" },
+    { "en": "Host virtual meetings", "es": "Organizar reuniones virtuales / Ser anfitrión de reuniones virtuales", "category": "Professional Activities" },
+    { "en": "Attend virtual meetings", "es": "Asistir a reuniones virtuales", "category": "Professional Activities" }
+  ],
+  "2-2": [
+    { "en": "Tourist office", "es": "Oficina de turismo", "category": "Cities Landmarks" },
+    { "en": "Restaurant", "es": "Restaurante", "category": "Cities Landmarks" },
+    { "en": "Art gallery", "es": "Galería de arte", "category": "Cities Landmarks" },
+    { "en": "Train station", "es": "Estación de tren", "category": "Cities Landmarks" },
+    { "en": "Hotel", "es": "Hotel", "category": "Cities Landmarks" },
+    { "en": "Bus station", "es": "Estación de autobuses", "category": "Cities Landmarks" },
+    { "en": "Supermarket", "es": "Supermercado", "category": "Cities Landmarks" },
+    { "en": "Park", "es": "Parque", "category": "Cities Landmarks" },
+    { "en": "Movie Theater", "es": "Cine", "category": "Cities Landmarks" },
+    { "en": "Post office", "es": "Oficina de correos", "category": "Cities Landmarks" },
+    { "en": "Museum", "es": "Museo", "category": "Cities Landmarks" },
+    { "en": "Shopping mall", "es": "Centro comercial", "category": "Cities Landmarks" },
+    { "en": "Library", "es": "Biblioteca", "category": "Cities Landmarks" },
+    { "en": "Bank", "es": "Banco", "category": "Cities Landmarks" },
+    { "en": "Pharmacy", "es": "Farmacia", "category": "Cities Landmarks" },
+    { "en": "Traffic light", "es": "Semáforo", "category": "Cities Landmarks" },
+    { "en": "Parking lot", "es": "Estacionamiento", "category": "Cities Landmarks" },
+    { "en": "Store", "es": "Tienda", "category": "Cities Landmarks" },
+    { "en": "Train", "es": "Tren", "category": "Ground Transportation" },
+    { "en": "Subway", "es": "Metro / Subterráneo", "category": "Ground Transportation" },
+    { "en": "Bus", "es": "Autobús", "category": "Ground Transportation" },
+    { "en": "Taxi", "es": "Taxi", "category": "Ground Transportation" },
+    { "en": "Rental car", "es": "Auto de alquiler", "category": "Ground Transportation" },
+    { "en": "Car", "es": "Auto / Coche", "category": "Ground Transportation" },
+    { "en": "Airport shuttle bus", "es": "Autobús de enlace del aeropuerto", "category": "Ground Transportation" },
+    { "en": "Ticket", "es": "Boleto / Pasaje", "category": "Ground Transportation" },
+    { "en": "Bus stop", "es": "Parada de autobús", "category": "Ground Transportation" },
+    { "en": "Subway station", "es": "Estación de metro", "category": "Ground Transportation" },
+    { "en": "Motorcycle", "es": "Motocicleta", "category": "Ground Transportation" },
+    { "en": "Bike", "es": "Bicicleta", "category": "Ground Transportation" },
+    { "en": "Go (straight) ahead", "es": "Siga recto / Vaya derecho", "category": "Giving Directions" },
+    { "en": "Turn left", "es": "Gire a la izquierda", "category": "Giving Directions" },
+    { "en": "Turn right", "es": "Gire a la derecha", "category": "Giving Directions" },
+    { "en": "Take the second left", "es": "Tome la segunda calle a la izquierda", "category": "Giving Directions" },
+    { "en": "Take the second right", "es": "Tome la segunda calle a la derecha", "category": "Giving Directions" },
+    { "en": "Go past", "es": "Pase de largo / Pase por al lado de", "category": "Giving Directions" },
+    { "en": "Make a U-turn", "es": "Haga un giro en U", "category": "Giving Directions" },
+    { "en": "Go back", "es": "Regrese / Vuelva", "category": "Giving Directions" },
+    { "en": "Take a taxi", "es": "Tome un taxi", "category": "Giving Directions" },
+    { "en": "Take a bus", "es": "Tome un autobús", "category": "Giving Directions" },
+    { "en": "Get in (cars, vans, and trucks)", "es": "Subir / Entrar (autos, camionetas y camiones)", "category": "Giving Directions" },
+    { "en": "Get out", "es": "Salir / Bajar", "category": "Giving Directions" },
+    { "en": "Get on (motorcycles, bicycles, buses, trains, and ships)", "es": "Subir / Montar (motos, bicicletas, autobuses, trenes y barcos)", "category": "Giving Directions" },
+    { "en": "Get off", "es": "Bajar (de un vehículo)", "category": "Giving Directions" },
+    { "en": "Between", "es": "Entre (dos cosas)", "category": "Giving Directions" },
+    { "en": "Opposite", "es": "Frente a / En frente de", "category": "Giving Directions" },
+    { "en": "Next to", "es": "Al lado de", "category": "Giving Directions" },
+    { "en": "On the corner", "es": "En la esquina", "category": "Giving Directions" }
+  ],
+  "2-3": [
+    { "en": "Ice skate", "es": "Patinar sobre hielo", "category": "Games & Sports" },
+    { "en": "volleyball", "es": "Voleibol", "category": "Games & Sports" },
+    { "en": "Play volleyball", "es": "Jugar voleibol", "category": "Games & Sports" },
+    { "en": "Ski", "es": "Esquiar", "category": "Games & Sports" },
+    { "en": "Play golf", "es": "Jugar al golf", "category": "Games & Sports" },
+    { "en": "Play soccer", "es": "Jugar al fútbol", "category": "Games & Sports" },
+    { "en": "Swim", "es": "Nadar", "category": "Games & Sports" },
+    { "en": "Play tennis", "es": "Jugar al tenis", "category": "Games & Sports" },
+    { "en": "Play football", "es": "Jugar al fútbol americano", "category": "Games & Sports" },
+    { "en": "Play basketball", "es": "Jugar al baloncesto / básquetbol", "category": "Games & Sports" },
+    { "en": "Play baseball", "es": "Jugar al béisbol", "category": "Games & Sports" },
+    { "en": "Ice hockey", "es": "Hockey sobre hielo", "category": "Games & Sports" },
+    { "en": "Martial arts", "es": "Artes marciales", "category": "Games & Sports" },
+    { "en": "Boxing", "es": "Boxeo", "category": "Games & Sports" },
+    { "en": "Diving", "es": "Buceo / Salto de trampolín", "category": "Games & Sports" },
+    { "en": "Surfing", "es": "Surf / Surfear", "category": "Games & Sports" },
+    { "en": "Rowing", "es": "Remo", "category": "Games & Sports" },
+    { "en": "Horse racing", "es": "Carreras de caballos", "category": "Games & Sports" },
+    { "en": "Water polo", "es": "Polo acuático / Waterpolo", "category": "Games & Sports" },
+    { "en": "Gymnastics", "es": "Gimnasia", "category": "Games & Sports" },
+    { "en": "Ski jumping", "es": "Salto de esquí", "category": "Games & Sports" },
+    { "en": "Going to the movies", "es": "Ir al cine", "category": "Pastimes" },
+    { "en": "Drawing", "es": "Dibujar", "category": "Pastimes" },
+    { "en": "Watching TV", "es": "Ver televisión", "category": "Pastimes" },
+    { "en": "Going for a walk", "es": "Ir a dar un paseo / Salir a caminar", "category": "Pastimes" },
+    { "en": "Playing the guitar", "es": "Tocar la guitarra", "category": "Pastimes" },
+    { "en": "Listening to music", "es": "Escuchar música", "category": "Pastimes" },
+    { "en": "Reading", "es": "Leer", "category": "Pastimes" },
+    { "en": "Cooking", "es": "Cocinar", "category": "Pastimes" },
+    { "en": "Playing video games", "es": "Jugar videojuegos", "category": "Pastimes" },
+    { "en": "Visiting friends", "es": "Visitar amigos", "category": "Pastimes" },
+    { "en": "Shopping", "es": "Ir de compras", "category": "Pastimes" },
+    { "en": "Studying", "es": "Estudiar", "category": "Pastimes" },
+    { "en": "Exercising", "es": "Hacer ejercicio", "category": "Pastimes" },
+    { "en": "Cleaning the house", "es": "Limpiar la casa", "category": "Pastimes" },
+    { "en": "Playing the piano", "es": "Tocar el piano", "category": "Pastimes" },
+    { "en": "Singing", "es": "Cantar", "category": "Pastimes" },
+    { "en": "Playing board games", "es": "Jugar juegos de mesa", "category": "Pastimes" },
+    { "en": "Dancing", "es": "Bailar", "category": "Pastimes" }
+  ],
+  "2-4": [
+    { "en": "Shirt", "es": "Camisa", "category": "Clothes" },
+    { "en": "T-shirt", "es": "Camiseta / Remera", "category": "Clothes" },
+    { "en": "Pants", "es": "Pantalones", "category": "Clothes" },
+    { "en": "Jacket", "es": "Chaqueta / Chaquetón", "category": "Clothes" },
+    { "en": "Dress", "es": "Vestido", "category": "Clothes" },
+    { "en": "Coat", "es": "Abrigo", "category": "Clothes" },
+    { "en": "Skirt", "es": "Falda", "category": "Clothes" },
+    { "en": "Tie", "es": "Corbata", "category": "Clothes" },
+    { "en": "Shoes", "es": "Zapatos", "category": "Clothes" },
+    { "en": "Hat", "es": "Sombrero", "category": "Clothes" },
+    { "en": "Suit", "es": "Traje", "category": "Clothes" },
+    { "en": "Vest", "es": "Chaleco", "category": "Clothes" },
+    { "en": "Shorts", "es": "Pantalones cortos / Shorts", "category": "Clothes" },
+    { "en": "Uniform", "es": "Uniforme", "category": "Clothes" },
+    { "en": "Sandals", "es": "Sandalias", "category": "Clothes" },
+    { "en": "Boots", "es": "Botas", "category": "Clothes" },
+    { "en": "Sneakers", "es": "Zapatillas deportivas / Tenis", "category": "Clothes" },
+    { "en": "Raincoat", "es": "Impermeable", "category": "Clothes" },
+    { "en": "Sweatshirt", "es": "Sudadera", "category": "Clothes" },
+    { "en": "Sweatpants", "es": "Pantalón de chándal / Sudadera", "category": "Clothes" },
+    { "en": "Gloves", "es": "Guantes", "category": "Clothes" },
+    { "en": "Cap", "es": "Gorra", "category": "Clothes" },
+    { "en": "Jeans", "es": "Pantalones vaqueros / Jeans", "category": "Clothes" },
+    { "en": "Sweater", "es": "Suéter / Jersey", "category": "Clothes" },
+    { "en": "Belt", "es": "Cinturón / Cinto", "category": "Clothes" },
+    { "en": "Glasses", "es": "Gafas / Lentes", "category": "Clothes" },
+    { "en": "Tank top", "es": "Camiseta sin mangas / Musculosa", "category": "Clothes" },
+    { "en": "Socks", "es": "Calcetines / Medias", "category": "Clothes" },
+    { "en": "Earrings", "es": "Aretes / Pendientes", "category": "Clothes" },
+    { "en": "Watch", "es": "Reloj de pulsera", "category": "Clothes" },
+    { "en": "Bracelet", "es": "Pulsera / Brazalete", "category": "Clothes" },
+    { "en": "Ring", "es": "Anillo", "category": "Clothes" },
+    { "en": "Headband", "es": "Diadema / Cinta para la cabeza", "category": "Clothes" },
+    { "en": "Flip-flops", "es": "Chancletas / Chanclas", "category": "Clothes" },
+    { "en": "Flats", "es": "Zapatos planos / Bailarinas", "category": "Clothes" },
+    { "en": "Scarf", "es": "Bufanda", "category": "Clothes" },
+    { "en": "Bow tie", "es": "Pajarita / Corbatín", "category": "Clothes" },
+    { "en": "Red", "es": "Rojo", "category": "Colors" },
+    { "en": "Blue", "es": "Azul", "category": "Colors" },
+    { "en": "Yellow", "es": "Amarillo", "category": "Colors" },
+    { "en": "Green", "es": "Verde", "category": "Colors" },
+    { "en": "Orange", "es": "Naranja / Anaranjado", "category": "Colors" },
+    { "en": "Purple", "es": "Púrpura / Morado", "category": "Colors" },
+    { "en": "Brown", "es": "Marrón / Café", "category": "Colors" },
+    { "en": "Black", "es": "Negro", "category": "Colors" },
+    { "en": "Gray", "es": "Gris", "category": "Colors" },
+    { "en": "White", "es": "Blanco", "category": "Colors" },
+    { "en": "Beige", "es": "Beis / Beige", "category": "Colors" },
+    { "en": "Pink", "es": "Rosa / Rosado", "category": "Colors" },
+    { "en": "Navy blue", "es": "Azul marino", "category": "Colors" },
+    { "en": "Lilac", "es": "Lila", "category": "Colors" },
+    { "en": "Turquoise", "es": "Turquesa", "category": "Colors" },
+    { "en": "Golden", "es": "Dorado", "category": "Colors" },
+    { "en": "Silver", "es": "Plateado", "category": "Colors" },
+    { "en": "Bronze", "es": "Bronce", "category": "Colors" },
+    { "en": "Olive green", "es": "Verde oliva", "category": "Colors" },
+    { "en": "Magenta", "es": "Magenta", "category": "Colors" }
+  ],
+  "3-1": [
+    { "en": "Cereal", "es": "Cereal", "category": "Food Types & Meals" },
+    { "en": "Eggs", "es": "Huevos", "category": "Food Types & Meals" },
+    { "en": "Steak", "es": "Filete / Filete de carne", "category": "Food Types & Meals" },
+    { "en": "Fish", "es": "Pescado", "category": "Food Types & Meals" },
+    { "en": "Salad", "es": "Ensalada", "category": "Food Types & Meals" },
+    { "en": "Pasta", "es": "Pasta", "category": "Food Types & Meals" },
+    { "en": "Chicken", "es": "Pollo", "category": "Food Types & Meals" },
+    { "en": "Fruit juice", "es": "Jugo de frutas", "category": "Food Types & Meals" },
+    { "en": "Coffee", "es": "Café", "category": "Food Types & Meals" },
+    { "en": "Tea", "es": "Té", "category": "Food Types & Meals" },
+    { "en": "Ice cream", "es": "Helado", "category": "Food Types & Meals" },
+    { "en": "Waffles", "es": "Gafles / Waffles", "category": "Food Types & Meals" },
+    { "en": "Potatoes", "es": "Papas / Patatas", "category": "Food Types & Meals" },
+    { "en": "Beans", "es": "Frijoles / Caraotas", "category": "Food Types & Meals" },
+    { "en": "Onions", "es": "Cebollas", "category": "Food Types & Meals" },
+    { "en": "Tomatoes", "es": "Tomates", "category": "Food Types & Meals" },
+    { "en": "Carrots", "es": "Zanahorias", "category": "Food Types & Meals" },
+    { "en": "Cabbage", "es": "Repollo", "category": "Food Types & Meals" },
+    { "en": "Cauliflower", "es": "Coliflor", "category": "Food Types & Meals" },
+    { "en": "Hot dog", "es": "Perro caliente / Perro caliente (hot dog)", "category": "Food Types & Meals" },
+    { "en": "Hamburger", "es": "Hamburguesa", "category": "Food Types & Meals" },
+    { "en": "Pizza", "es": "Pizza", "category": "Food Types & Meals" },
+    { "en": "Oatmeal", "es": "Avena", "category": "Food Types & Meals" },
+    { "en": "Cheese", "es": "Queso", "category": "Food Types & Meals" },
+    { "en": "Bread", "es": "Pan", "category": "Food Types & Meals" },
+    { "en": "Butter", "es": "Mantequilla", "category": "Food Types & Meals" },
+    { "en": "Milk", "es": "Leche", "category": "Food Types & Meals" },
+    { "en": "Bacon", "es": "Tocineta / Tocino", "category": "Food Types & Meals" },
+    { "en": "Yogurt", "es": "Yogur", "category": "Food Types & Meals" },
+    { "en": "Sushi", "es": "Sushi", "category": "Food Types & Meals" },
+    { "en": "Rice", "es": "Arroz", "category": "Food Types & Meals" },
+    { "en": "Soup", "es": "Sopa", "category": "Food Types & Meals" },
+    { "en": "Sandwich", "es": "Sándwich", "category": "Food Types & Meals" },
+    { "en": "Water", "es": "Agua", "category": "Food Types & Meals" },
+    { "en": "Beer", "es": "Cerveza", "category": "Food Types & Meals" },
+    { "en": "Lemonade", "es": "Limonada", "category": "Food Types & Meals" },
+    { "en": "Soda", "es": "Refresco / Gaseosa", "category": "Food Types & Meals" },
+    { "en": "Wine", "es": "Vino", "category": "Food Types & Meals" },
+    { "en": "Milkshake", "es": "Batido / Malteada", "category": "Food Types & Meals" },
+    { "en": "Cookies", "es": "Galletas", "category": "Food Types & Meals" },
+    { "en": "Cake", "es": "Pastel / Torta", "category": "Food Types & Meals" },
+    { "en": "Donuts", "es": "Donas / Rosquillas", "category": "Food Types & Meals" },
+    { "en": "Pie", "es": "Pay / Tarta", "category": "Food Types & Meals" },
+    { "en": "Brownies", "es": "Brownies", "category": "Food Types & Meals" },
+    { "en": "Marshmallows", "es": "Malvaviscos / Nubes", "category": "Food Types & Meals" },
+    { "en": "Cotton candy", "es": "Algodón de azúcar", "category": "Food Types & Meals" },
+    { "en": "Gelatin", "es": "Gelatina", "category": "Food Types & Meals" },
+    { "en": "Custard", "es": "Natilla / Crema pastelera", "category": "Food Types & Meals" },
+    { "en": "Candy", "es": "Dulce / Caramelo", "category": "Food Types & Meals" },
+    { "en": "Turkey", "es": "Pavo", "category": "Food Types & Meals" },
+    { "en": "Sausage", "es": "Salchicha / Embutido", "category": "Food Types & Meals" },
+    { "en": "Pork", "es": "Carne de cerdo", "category": "Food Types & Meals" },
+    { "en": "Apple", "es": "Manzana", "category": "Food Types & Meals" },
+    { "en": "Orange", "es": "Naranja", "category": "Food Types & Meals" },
+    { "en": "Tangerine", "es": "Mandarina", "category": "Food Types & Meals" },
+    { "en": "Lime", "es": "Lima / Limón verde", "category": "Food Types & Meals" },
+    { "en": "Watermelon", "es": "Sandía / Patilla", "category": "Food Types & Meals" },
+    { "en": "Banana", "es": "Banana / Plátano", "category": "Food Types & Meals" },
+    { "en": "Pear", "es": "Pera", "category": "Food Types & Meals" },
+    { "en": "Lemon", "es": "Limón / Limón amarillo", "category": "Food Types & Meals" },
+    { "en": "Grapefruit", "es": "Toronja / Pomelo", "category": "Food Types & Meals" },
+    { "en": "Grapes", "es": "Uvas", "category": "Food Types & Meals" },
+    { "en": "Cherry", "es": "Cereza", "category": "Food Types & Meals" },
+    { "en": "Guava", "es": "Guayaba", "category": "Food Types & Meals" },
+    { "en": "Kiwi", "es": "Kiwi", "category": "Food Types & Meals" },
+    { "en": "Coconut", "es": "Coco", "category": "Food Types & Meals" },
+    { "en": "Mango", "es": "Mango", "category": "Food Types & Meals" },
+    { "en": "Cantaloupe", "es": "Melón", "category": "Food Types & Meals" },
+    { "en": "Peach", "es": "Durazno / Melocotón", "category": "Food Types & Meals" },
+    { "en": "Pineapple", "es": "Piña", "category": "Food Types & Meals" },
+    { "en": "Passion fruit", "es": "Maracuyá / Parcha", "category": "Food Types & Meals" },
+    { "en": "Strawberry", "es": "Fresa", "category": "Food Types & Meals" },
+    { "en": "Plantain", "es": "Plátano verde / Plátano macho", "category": "Food Types & Meals" },
+    { "en": "Lettuce", "es": "Lechuga", "category": "Food Types & Meals" },
+    { "en": "Peas", "es": "Guisantes / Arvejas", "category": "Food Types & Meals" },
+    { "en": "Avocado", "es": "Aguacate / Palta", "category": "Food Types & Meals" },
+    { "en": "Broccoli", "es": "Brócoli", "category": "Food Types & Meals" },
+    { "en": "Garlic", "es": "Ajo", "category": "Food Types & Meals" },
+    { "en": "Eggplant", "es": "Berenjena", "category": "Food Types & Meals" },
+    { "en": "Pumpkin", "es": "Calabaza / Ahuyama", "category": "Food Types & Meals" },
+    { "en": "Cucumber", "es": "Pepino", "category": "Food Types & Meals" },
+    { "en": "Pepper", "es": "Pimiento / Pimienta", "category": "Food Types & Meals" },
+    { "en": "Peanuts", "es": "Maní / Cacahuates", "category": "Food Types & Meals" },
+    { "en": "Popcorn", "es": "Palomitas de maíz / Cotufas", "category": "Food Types & Meals" },
+    { "en": "French fries", "es": "Papas fritas", "category": "Food Types & Meals" },
+    { "en": "Potato chips", "es": "Papas fritas de bolsa / Chips", "category": "Food Types & Meals" },
+    { "en": "Nachos", "es": "Nachos", "category": "Food Types & Meals" },
+    { "en": "Pretzel", "es": "Pretzel", "category": "Food Types & Meals" },
+    { "en": "Crackers", "es": "Galletas saladas", "category": "Food Types & Meals" },
+    { "en": "Fried chicken", "es": "Pollo frito", "category": "Food Types & Meals" },
+    { "en": "Corn dog", "es": "Bandertilla / Corn dog", "category": "Food Types & Meals" },
+    { "en": "Taco", "es": "Taco", "category": "Food Types & Meals" },
+    { "en": "Mustard", "es": "Mostaza", "category": "Food Types & Meals" },
+    { "en": "Ketchup", "es": "Salsa de tomate / Kétchup", "category": "Food Types & Meals" },
+    { "en": "Mayonnaise", "es": "Mayonesa", "category": "Food Types & Meals" },
+    { "en": "Spinach", "es": "Espinaca", "category": "Food Types & Meals" }
+  ],
+  "3-2": [
+    { "en": "A cold", "es": "Un resfriado / Catarro", "category": "Ailments" },
+    { "en": "Measles", "es": "Sarampión", "category": "Ailments" },
+    { "en": "The flu", "es": "La gripe", "category": "Ailments" },
+    { "en": "Malaria", "es": "Malaria / Paludismo", "category": "Ailments" },
+    { "en": "Tuberculosis", "es": "Tuberculosis", "category": "Ailments" },
+    { "en": "AIDS", "es": "SIDA", "category": "Ailments" },
+    { "en": "Diabetes", "es": "Diabetes", "category": "Ailments" },
+    { "en": "Hypertension", "es": "Hipertensión / Presión arterial alta", "category": "Ailments" },
+    { "en": "Head", "es": "Cabeza", "category": "Parts of the body" },
+    { "en": "Forehead", "es": "Frente", "category": "Parts of the body" },
+    { "en": "Ears", "es": "Oídos / Orejas", "category": "Parts of the body" },
+    { "en": "Nose", "es": "Nariz", "category": "Parts of the body" },
+    { "en": "Mouth", "es": "Boca", "category": "Parts of the body" },
+    { "en": "Eyes", "es": "Ojos", "category": "Parts of the body" },
+    { "en": "Cheeks", "es": "Mejillas / Cachetes", "category": "Parts of the body" },
+    { "en": "Chin", "es": "Barbilla / Mentón", "category": "Parts of the body" },
+    { "en": "Tongue", "es": "Lengua", "category": "Parts of the body" },
+    { "en": "Teeth", "es": "Dientes", "category": "Parts of the body" },
+    { "en": "Chest", "es": "Pecho", "category": "Parts of the body" },
+    { "en": "Back", "es": "Espalda", "category": "Parts of the body" },
+    { "en": "Neck", "es": "Cuello", "category": "Parts of the body" },
+    { "en": "Stomach", "es": "Estómago / Abdomen", "category": "Parts of the body" },
+    { "en": "Arm", "es": "Brazo", "category": "Parts of the body" },
+    { "en": "Hand", "es": "Mano", "category": "Parts of the body" },
+    { "en": "Finger", "es": "Dedo (de la mano)", "category": "Parts of the body" },
+    { "en": "Elbow", "es": "Codo", "category": "Parts of the body" },
+    { "en": "Shoulder", "es": "Hombro", "category": "Parts of the body" },
+    { "en": "Leg", "es": "Pierna", "category": "Parts of the body" },
+    { "en": "Knee", "es": "Rodilla", "category": "Parts of the body" },
+    { "en": "Feet", "es": "Pies", "category": "Parts of the body" },
+    { "en": "Toe", "es": "Dedo del pie", "category": "Parts of the body" },
+    { "en": "Heart", "es": "Corazón", "category": "Parts of the body" },
+    { "en": "Brain", "es": "Cerebro", "category": "Parts of the body" },
+    { "en": "Lungs", "es": "Pulmones", "category": "Parts of the body" },
+    { "en": "Muscle", "es": "Músculo", "category": "Parts of the body" },
+    { "en": "Bones", "es": "Huesos", "category": "Parts of the body" },
+    { "en": "Throat", "es": "Garganta", "category": "Parts of the body" },
+    { "en": "Wrist", "es": "Muñeca", "category": "Parts of the body" },
+    { "en": "Take a rest", "es": "Descansar / Tomar un descanso", "category": "Remedies" },
+    { "en": "See a doctor", "es": "Ir al médico / Ver a un doctor", "category": "Remedies" },
+    { "en": "See a dentist", "es": "Ir al dentista / Ver a un dentista", "category": "Remedies" },
+    { "en": "Lie down", "es": "Acostarse / Tumbarse", "category": "Remedies" },
+    { "en": "Take some cough medicine", "es": "Tomar jarabe para la tos / medicina para la tos", "category": "Remedies" },
+    { "en": "Take some aspirin", "es": "Tomar una aspirina", "category": "Remedies" },
+    { "en": "Drink tea", "es": "Tomar té", "category": "Remedies" },
+    { "en": "Eat chicken soup", "es": "Comer sopa de pollo", "category": "Remedies" },
+    { "en": "Take vitamin A, C or D", "es": "Tomar vitamina A, C o D", "category": "Remedies" },
+    { "en": "Take a bath in warm water", "es": "Tomar un baño de agua tibia", "category": "Remedies" },
+    { "en": "Headache", "es": "Dolor de cabeza", "category": "Symptoms" },
+    { "en": "Backache", "es": "Dolor de espalda", "category": "Symptoms" },
+    { "en": "Fever", "es": "Fiebre", "category": "Symptoms" },
+    { "en": "Cough", "es": "Tos", "category": "Symptoms" },
+    { "en": "Stomachache", "es": "Dolor de estómago", "category": "Symptoms" },
+    { "en": "Earache", "es": "Dolor de oído", "category": "Symptoms" },
+    { "en": "Toothache", "es": "Dolor de muela / Dolor de dientes", "category": "Symptoms" },
+    { "en": "Sore Throat", "es": "Dolor de garganta", "category": "Symptoms" },
+    { "en": "Rash", "es": "Sarpullido / Erupción cutánea", "category": "Symptoms" },
+    { "en": "Runny nose", "es": "Secreción nasal / Nariz goteando", "category": "Symptoms" },
+    { "en": "Take a rest", "es": "Descansar / Tomar un descanso", "category": "Symptoms" },
+    { "en": "See a doctor", "es": "Ir al médico / Ver a un doctor", "category": "Symptoms" },
+    { "en": "See a dentist", "es": "Ir al dentista / Ver a un dentista", "category": "Symptoms" },
+    { "en": "Lie down", "es": "Acostarse / Tumbarse", "category": "Symptoms" },
+    { "en": "Take some cough medicine", "es": "Tomar jarabe para la tos / medicina para la tos", "category": "Symptoms" },
+    { "en": "Take some aspirin", "es": "Tomar una aspirina", "category": "Symptoms" },
+    { "en": "Drink tea", "es": "Tomar té", "category": "Symptoms" },
+    { "en": "Eat chicken soup", "es": "Comer sopa de pollo", "category": "Symptoms" },
+    { "en": "Take vitamin A, C or D", "es": "Tomar vitamina A, C o D", "category": "Symptoms" },
+    { "en": "Take a bath in warm water", "es": "Tomar un baño de agua tibia", "category": "Symptoms" }
+  ],
+  "3-3": [
+    { "en": "Watch fireworks", "es": "Ver fuegos artificiales", "category": "Plan holidays" },
+    { "en": "Decorate", "es": "Decorar", "category": "Plan holidays" },
+    { "en": "Eat traditional food", "es": "Comer comida tradicional", "category": "Plan holidays" },
+    { "en": "Drink", "es": "Beber / Tomar", "category": "Plan holidays" },
+    { "en": "Prepare special dishes", "es": "Preparar platillos especiales", "category": "Plan holidays" },
+    { "en": "Get together with family", "es": "Reunirse con la familia", "category": "Plan holidays" },
+    { "en": "Go to a parade", "es": "Ir a un desfile", "category": "Plan holidays" },
+    { "en": "Dance", "es": "Bailar", "category": "Plan holidays" },
+    { "en": "Go to church", "es": "Ir a la iglesia", "category": "Plan holidays" },
+    { "en": "Give presents", "es": "Dar regalos / Entregar obsequios", "category": "Plan holidays" },
+    { "en": "Go out for dinner", "es": "Salir a cenar", "category": "Plans" },
+    { "en": "Have a party", "es": "Hacer una fiesta / Tener una fiesta", "category": "Plans" },
+    { "en": "Have a barbecue", "es": "Hacer una barbacoa / Hacer una parrillada", "category": "Plans" },
+    { "en": "Go to a club", "es": "Ir a una discoteca / Ir a un club", "category": "Plans" },
+    { "en": "Go to the movies", "es": "Ir al cine", "category": "Plans" },
+    { "en": "Have a family meal", "es": "Tener una comida familiar", "category": "Plans" },
+    { "en": "Have a picnic", "es": "Hacer un picnic / Ir de día de campo", "category": "Plans" },
+    { "en": "Have a graduation party", "es": "Tener una fiesta de graduación", "category": "Plans" },
+    { "en": "Clean the house", "es": "Limpiar la casa", "category": "Plans" },
+    { "en": "Go shopping", "es": "Ir de compras", "category": "Plans" },
+    { "en": "Have a wedding", "es": "Tener una boda / Celebrar una boda", "category": "Plans" },
+    { "en": "Have a baby shower", "es": "Tener un baby shower / Celebrar la llegada del bebé", "category": "Plans" },
+    { "en": "Stay home", "es": "Quedarse en casa", "category": "Plans" },
+    { "en": "Go to bed early", "es": "Irse a la cama temprano / Acostarse temprano", "category": "Plans" },
+    { "en": "Watch fireworks", "es": "Ver fuegos artificiales", "category": "Plans" },
+    { "en": "Decorate", "es": "Decorar", "category": "Plans" },
+    { "en": "Eat traditional food", "es": "Comer comida tradicional", "category": "Plans" },
+    { "en": "Go for a drink", "es": "Salir a tomar algo", "category": "Plans" },
+    { "en": "Prepare special dishes", "es": "Preparar platillos especiales", "category": "Plans" },
+    { "en": "Get together with family", "es": "Reunirse con la familia", "category": "Plans" },
+    { "en": "Go to a parade", "es": "Ir a un desfile", "category": "Plans" },
+    { "en": "Dance", "es": "Bailar", "category": "Plans" },
+    { "en": "Go to church", "es": "Ir a la iglesia", "category": "Plans" },
+    { "en": "Give presents", "es": "Dar regalos / Entregar obsequios", "category": "Plans" },
+    { "en": "Law", "es": "Derecho / Leyes", "category": "Professions" },
+    { "en": "Lawyer", "es": "Abogado/a", "category": "Professions" },
+    { "en": "Nursing", "es": "Enfermería", "category": "Professions" },
+    { "en": "Nurse", "es": "Enfermero/a", "category": "Professions" },
+    { "en": "Medicine", "es": "Medicina", "category": "Professions" },
+    { "en": "Doctor", "es": "Médico/a / Doctor/a", "category": "Professions" },
+    { "en": "Music", "es": "Música", "category": "Professions" },
+    { "en": "Musician", "es": "Músico/a", "category": "Professions" },
+    { "en": "Acting", "es": "Actuación", "category": "Professions" },
+    { "en": "Actor", "es": "Actor", "category": "Professions" },
+    { "en": "Psychology", "es": "Psicología", "category": "Professions" },
+    { "en": "Psycologist", "es": "Psicólogo/a", "category": "Professions" },
+    { "en": "Education", "es": "Educación", "category": "Professions" },
+    { "en": "Teacher", "es": "Profesor/a / Maestro/a", "category": "Professions" },
+    { "en": "Science", "es": "Ciencia", "category": "Professions" },
+    { "en": "Scientist", "es": "Científico/a", "category": "Professions" },
+    { "en": "Agriculture", "es": "Agricultura", "category": "Professions" },
+    { "en": "Farmer", "es": "Agricultor/a / Granjero/a", "category": "Professions" },
+    { "en": "Engineering", "es": "Ingeniería", "category": "Professions" },
+    { "en": "Engineer", "es": "Ingeniero/a", "category": "Professions" },
+    { "en": "Business", "es": "Negocios / Comercio", "category": "Professions" },
+    { "en": "Businessman", "es": "Hombre de negocios / Empresario", "category": "Professions" },
+    { "en": "The military", "es": "El ejército / Las fuerzas armadas", "category": "Professions" },
+    { "en": "Soldier", "es": "Soldado", "category": "Professions" },
+    { "en": "The ministry", "es": "El sacerdocio / El ministerio religioso", "category": "Professions" },
+    { "en": "Priest", "es": "Sacerdote / Cura", "category": "Professions" }
+  ],
+  "3-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "4-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "4-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "4-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "4-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "5-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "5-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "5-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "5-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "6-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "6-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "6-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "6-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "7-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "7-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "7-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "7-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "8-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "8-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "8-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "8-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "9-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "9-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "9-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "9-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "10-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "10-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "10-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "10-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "11-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "11-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "11-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "11-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "12-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "12-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "12-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "12-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "14-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "14-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
   "14-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "14-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "15-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "15-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "15-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "15-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "16-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "16-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "16-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "16-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "18-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "18-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "18-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "18-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "19-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "19-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "19-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "19-4": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "20-1": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "20-2": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "20-3": [
+    { "en": "Achievement", "es": "Logro", "category": "Abstract" }
+  ],
+  "20-4": [
     { "en": "Achievement", "es": "Logro", "category": "Abstract" }
   ]
 }
