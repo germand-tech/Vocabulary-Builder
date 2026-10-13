@@ -323,7 +323,6 @@
     { "en": "Water bottle", "es": "Botella de agua", "category": "Personal Possessions" },
     { "en": "Car key", "es": "Llave del auto", "category": "Personal Possessions" }
   ],
-  ,
   "2-1": [
     { "en": "Get up", "es": "Levantarse", "category": "Daily activities" },
     { "en": "Take a shower", "es": "Tomar una ducha / Ducharse", "category": "Daily activities" },
