@@ -1,5 +1,5 @@
 // URL oficial de tu base de datos JSON en GitHub Pages
-const GITHUB_JSON_URL = "https://germand-tech.github.io/Vocabulary-Builder/vocabulary.json";
+const GITHUB_JSON_URL = `https://germand-tech.github.io/Vocabulary-Builder/vocabulary.json?v=${Date.now()}`;
 
 // Cargar librerías necesarias dinámicamente si no están presentes
 function loadExternalScripts() {
