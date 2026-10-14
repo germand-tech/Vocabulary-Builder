@@ -106,13 +106,13 @@ function injectHTMLStructure() {
           <div class="card-3d" id="mainCard" onclick="flipCard()">
             <div class="card-inner">
               <div class="card-front">
-                <div class="card-tag" id="cardCategory">Category</div>
-                <img id="cardImage" class="card-img" src="" alt="Vocabulary illustration" style="display: none;">
+                <div class="card-tag" id="cardCategory">Category</div>                
                 <div class="card-word" id="cardEnglish">English</div>
                 <div class="card-hint">Click to flip card</div>
               </div>
               <div class="card-back">
                 <div class="card-tag">Meaning</div>
+                <img id="cardImage" class="card-img" src="" alt="Vocabulary illustration" style="display: none;">
                 <div class="card-word" id="cardSpanish">Español</div>
               </div>
             </div>
