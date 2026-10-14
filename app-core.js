@@ -17,14 +17,13 @@ function loadExternalScripts() {
 loadExternalScripts();
 
 // 1. Detectar Level y Unit desde la URL de Moodle
+// Detectar Level y Unit desde la URL de Moodle
 function getLevelAndUnitFromURL() {
-  // 1. Reemplazamos '+' por espacios y decodificamos la URL completa
-  const rawURL = window.location.href.replace(/\+/g, " ");
-  const currentURL = decodeURIComponent(rawURL);
+  // Decodificamos la URL y reemplazamos %20 y + por espacios
+  let currentURL = decodeURIComponent(window.location.href).replace(/\+|\%20/g, " ");
   
-  // 2. Buscamos 'Level' seguido de letras/números y 'Unit' seguido de números
-  // \s* permite cero o más espacios/separadores entre las palabras
-  const match = currentURL.match(/Level\s*([a-zA-Z0-9]+)\s*Unit\s*(\d+)/i);
+  // Expresión regular flexible para capturar "Level X" y "Unit Y"
+  const match = currentURL.match(/Level[\s\-_]*([a-zA-Z0-9]+)[\s\-_]*Unit[\s\-_]*(\d+)/i);
 
   if (match) {
     const levelStr = match[1].toUpperCase();
@@ -32,8 +31,9 @@ function getLevelAndUnitFromURL() {
     return { level: levelStr, unit: unitStr, key: `${levelStr}-${unitStr}` };
   }
   
-  console.warn("No se detectó Level/Unit en la URL.");
-  return null;
+  // Lanza un error explícito en consola con la URL evaluada para diagnosticar el problema
+  console.error("Error al extraer Level/Unit. URL procesada:", currentURL);
+  throw new Error("No se pudo detectar el nivel y la unidad desde la URL actual.");
 }
 
 let fullVocabulary = [];
