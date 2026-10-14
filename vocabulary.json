@@ -2842,7 +2842,7 @@
     { "en": "Shortage", "es": "Esccasez / Falta / Desabastecimiento", "category": "Water" },
     { "en": "Sinkhole", "es": "Cenote / Socavón / Sumidero", "category": "Water" },
     { "en": "Sip", "es": "Sorbete / Sorbo / Beber a sorbos", "category": "Water" },
-    { "en": "Soak", "es": "Empapar / Remojar", "category": "Water" },
+    { "en": "Soak", "es": "Empapar / Remojar", "category": "Water" }
   ],
   "20-3": [
     { "en": "Accent", "es": "Acento / Color de acento / Detalle", "category": "Creativity and Art" },
