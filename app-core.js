@@ -111,7 +111,7 @@ function injectHTMLStructure() {
                 <div class="card-hint">Click to flip card</div>
               </div>
               <div class="card-back">
-                <div class="card-tag">Spanish Meaning</div>
+                <div class="card-tag">Meaning</div>
                 <div class="card-word" id="cardSpanish">Español</div>
               </div>
             </div>
@@ -135,7 +135,7 @@ function injectHTMLStructure() {
           <div class="progress-bar-container">
             <div class="progress-fill" id="learnProgressBar"></div>
           </div>
-          <p class="card-hint" style="margin-top: 1rem;">Listen carefully to the audio and select the matching Spanish translation.</p>
+          <p class="card-hint" style="margin-top: 1rem;">Listen carefully to the audio and select the matching definition.</p>
           <button class="btn btn-primary btn-audio-lg" onclick="speakLearnQuestion()">🔊</button>
           <div class="quiz-options" id="learnOptions"></div>
         </div>
@@ -816,7 +816,7 @@ function renderTestQuestion() {
 
   if (test.type === 'oral') {
     contentHTML += `
-      <h3 style="font-size: 1.2rem; margin: 1rem 0;">Read in Spanish and pronounce in English:</h3>
+      <h3 style="font-size: 1.2rem; margin: 1rem 0;">Read the meaning and pronounce the matching word in English:</h3>
       <p style="font-size: 2rem; font-weight: 700; color: var(--primary); margin-bottom: 1.5rem;">"${item.es}"</p>
       <button id="oralTestMicBtn" class="btn btn-primary btn-icon" style="width: 75px; height: 75px; font-size: 2.2rem; margin: 0 auto;" onclick="testRecordOral('${item.en.replace(/'/g, "\\'")}')">🎙️</button>
       <div id="testOralStatus" style="margin-top: 1.2rem; font-weight: 600; color: var(--text-muted); min-height: 48px;">
