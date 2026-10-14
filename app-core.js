@@ -666,8 +666,8 @@ function initMatchGame() {
 
   let cards = [];
   shuffled.forEach((item, index) => {
-    cards.push({ id: index, text: item.en, type: 'en' });
-    cards.push({ id: index, text: item.es, type: 'es' });
+    cards.push({ id: index, text: item.en, img: null, type: 'en' });
+    cards.push({ id: index, text: item.es, img: item.img || null, type: 'es' });
   });
 
   cards.sort(() => 0.5 - Math.random());
@@ -675,8 +675,18 @@ function initMatchGame() {
   cards.forEach((c) => {
     const cardElem = document.createElement('div');
     cardElem.className = 'match-card';
-    cardElem.innerText = c.text;
     cardElem.dataset.id = c.id;
+
+    let contentHTML = '<div class="match-card-content">';
+    if (c.img) {
+      contentHTML += `<img src="${c.img}" alt="Match item" class="match-card-img">`;
+    }
+    if (c.text && c.text.trim() !== '') {
+      contentHTML += `<span class="match-text">${c.text}</span>`;
+    }
+    contentHTML += '</div>';
+
+    cardElem.innerHTML = contentHTML;
     cardElem.onclick = () => selectMatchCard(cardElem);
     grid.appendChild(cardElem);
   });
