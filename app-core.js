@@ -17,24 +17,34 @@ function loadExternalScripts() {
 loadExternalScripts();
 
 // 1. Detectar Level y Unit desde la URL de Moodle
-// Detectar Level y Unit desde la URL de Moodle
 function getLevelAndUnitFromURL() {
-  // Decodificamos la URL y reemplazamos %20 y + por espacios
-  let currentURL = decodeURIComponent(window.location.href).replace(/\+|\%20/g, " ");
-  
-  // Expresión regular flexible para capturar "Level X" y "Unit Y"
-  const match = currentURL.match(/Level[\s\-_]*([a-zA-Z0-9]+)[\s\-_]*Unit[\s\-_]*(\d+)/i);
+    // Decodifica la URL de la página actual y reemplaza %20 y + por espacios
+    let currentURL = decodeURIComponent(window.location.href).replace(/\+|\%20/g, " ");
+    
+    // Captura "Level X" y "Unit Y" tolerando guiones, espacios y %20
+    const match = currentURL.match(/Level[\s\-_]*([a-zA-Z0-9]+)[\s\-_]*Unit[\s\-_]*(\d+)/i);
 
-  if (match) {
-    const levelStr = match[1].toUpperCase();
-    const unitStr = match[2];
-    return { level: levelStr, unit: unitStr, key: `${levelStr}-${unitStr}` };
+    if (match) {
+      const levelStr = match[1].toUpperCase();
+      const unitStr = match[2];
+      return { level: levelStr, unit: unitStr, key: `${levelStr}-${unitStr}` };
+    }
+    
+    // Si la URL no coincide, lanza un error visible en la consola (F12)
+    console.error("Error al extraer Level/Unit. URL procesada:", currentURL);
+    throw new Error("No se pudo detectar el nivel y la unidad desde la URL del recurso Moodle.");
   }
-  
-  // Lanza un error explícito en consola con la URL evaluada para diagnosticar el problema
-  console.error("Error al extraer Level/Unit. URL procesada:", currentURL);
-  throw new Error("No se pudo detectar el nivel y la unidad desde la URL actual.");
-}
+
+  // Ejemplo de uso al cargar el HTML
+  try {
+    const targetInfo = getLevelAndUnitFromURL();
+    console.log("Datos detectados:", targetInfo);
+    
+    // Aquí actualizas los elementos de tu HTML
+    // document.getElementById("header-badge").textContent = `📌 Level ${targetInfo.level} — Unit ${targetInfo.unit}`;
+  } catch (error) {
+    console.error("Falló la inicialización:", error.message);
+  }
 
 let fullVocabulary = [];
 let currentVocab = [];
