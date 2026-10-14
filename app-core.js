@@ -107,6 +107,7 @@ function injectHTMLStructure() {
             <div class="card-inner">
               <div class="card-front">
                 <div class="card-tag" id="cardCategory">Category</div>
+                <img id="cardImage" class="card-img" src="" alt="Vocabulary illustration" style="display: none;">
                 <div class="card-word" id="cardEnglish">English</div>
                 <div class="card-hint">Click to flip card</div>
               </div>
@@ -409,6 +410,18 @@ function renderFlashcard() {
   document.getElementById('cardEnglish').innerText = card.en;
   document.getElementById('cardSpanish').innerText = card.es;
   document.getElementById('cardCounter').innerText = `Card ${currentCardIdx + 1} of ${currentVocab.length}`;
+
+  // Lógica para mostrar u ocultar la imagen
+  const imgElem = document.getElementById('cardImage');
+  if (imgElem) {
+    if (card.img) {
+      imgElem.src = card.img;
+      imgElem.style.display = 'block';
+    } else {
+      imgElem.style.display = 'none';
+      imgElem.src = '';
+    }
+  }
 }
 
 function flipCard() {
