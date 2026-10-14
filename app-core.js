@@ -18,20 +18,22 @@ loadExternalScripts();
 
 // 1. Detectar Level y Unit desde la URL de Moodle
 function getLevelAndUnitFromURL() {
-  const currentURL = window.location.href;
+  // 1. Reemplazamos '+' por espacios y decodificamos la URL completa
+  const rawURL = window.location.href.replace(/\+/g, " ");
+  const currentURL = decodeURIComponent(rawURL);
   
-  // Acepta letras y números para el nivel (\w+) y números para la unidad (\d+)
-  const match = currentURL.match(/Level%20([a-zA-Z0-9]+)%20Unit%20(\d+)/i) || 
-                currentURL.match(/Level\s*([a-zA-Z0-9]+)\s*Unit\s*(\d+)/i);
+  // 2. Buscamos 'Level' seguido de letras/números y 'Unit' seguido de números
+  // \s* permite cero o más espacios/separadores entre las palabras
+  const match = currentURL.match(/Level\s*([a-zA-Z0-9]+)\s*Unit\s*(\d+)/i);
 
   if (match) {
-    const levelStr = match[1].toUpperCase(); // Convierte a mayúsculas ("a1" -> "A1")
+    const levelStr = match[1].toUpperCase();
     const unitStr = match[2];
     return { level: levelStr, unit: unitStr, key: `${levelStr}-${unitStr}` };
   }
   
-  console.warn("No se detectó Level/Unit en la URL. Usando A1-1 por defecto.");
-  return { level: "A1", unit: "1", key: "A1-1" };
+  console.warn("No se detectó Level/Unit en la URL.");
+  return null;
 }
 
 let fullVocabulary = [];
