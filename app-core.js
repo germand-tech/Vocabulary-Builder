@@ -198,19 +198,50 @@ async function initApp() {
   }
 }
 
+// Función auxiliar para convertir números a palabras en inglés
+function numberToWords(num) {
+  if (num === 0) return 'zero';
+  const ones = ['', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 
+                'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen', 
+                'seventeen', 'eighteen', 'nineteen'];
+  const tens = ['', '', 'twenty', 'thirty', 'forty', 'fifty', 'sixty', 'seventy', 'eighty', 'ninety'];
+
+  if (num < 20) return ones[num];
+  if (num < 100) return tens[Math.floor(num / 10)] + (num % 10 !== 0 ? ' ' + ones[num % 10] : '');
+  if (num < 1000) return ones[Math.floor(num / 100)] + ' hundred' + (num % 100 !== 0 ? ' ' + numberToWords(num % 100) : '');
+  return num.toString();
+}
+
 function normalizeText(text) {
   if (!text) return "";
   let str = text.toLowerCase().trim();
-  const replacements = {
-    "0": "zero", "oh": "zero", "1": "one", "won": "one", "2": "two", "to": "two", "too": "two",
-    "3": "three", "tree": "three", "4": "four", "for": "four", "fore": "four", "5": "five",
-    "6": "six", "sixx": "six", "sex": "six", "7": "seven", "8": "eight", "ate": "eight",
-    "9": "nine", "10": "ten", "ok": "okay", "im": "i am", "i'm": "i am", "mister": "mr",
-    "missus": "mrs", "goodbye": "bye", "good-bye": "bye", "bye-bye": "bye", "u": "you",
-    "r": "are", "mornin": "morning"
+
+  // 1. Convertir números enteros (ej. 90 -> ninety, 21 -> twenty one)
+  str = str.replace(/\b\d+\b/g, (match) => {
+    return numberToWords(parseInt(match, 10));
+  });
+
+  // 2. En caso de que queden dígitos sueltos pegados por guiones u otros símbolos
+  const digitToWord = {
+    '0': 'zero', '1': 'one', '2': 'two', '3': 'three', '4': 'four',
+    '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine'
   };
+  str = str.replace(/\d/g, (d) => ` ${digitToWord[d]} `);
+
+  // 3. Diccionario de equivalencias y pronunciaciones comunes
+  const replacements = {
+    "oh": "zero", "won": "one", "to": "two", "too": "two",
+    "tree": "three", "for": "four", "fore": "four",
+    "sixx": "six", "sex": "six", "ate": "eight",
+    "ok": "okay", "im": "i am", "i'm": "i am", "mister": "mr",
+    "missus": "mrs", "goodbye": "bye", "good-bye": "bye", "bye-bye": "bye",
+    "u": "you", "r": "are", "mornin": "morning"
+  };
+
+  // 4. Limpieza final de caracteres especiales
   str = str.replace(/[^a-z0-9\s]/g, ' ');
   let words = str.split(/\s+/).filter(Boolean).map(w => replacements[w] || w);
+
   return words.join(' ');
 }
 
