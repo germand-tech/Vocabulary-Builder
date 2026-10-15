@@ -216,20 +216,31 @@ function normalizeText(text) {
   if (!text) return "";
   let str = text.toLowerCase().trim();
 
-  // 1. Convertir números enteros (ej. 90 -> ninety, 21 -> twenty one)
+  // 1. Normalizar formato de horas exactas (ej. 6:00 -> six o clock)
+  str = str.replace(/\b(\d{1,2}):00\b/g, (match, hour) => {
+    return `${numberToWords(parseInt(hour, 10))} o clock`;
+  });
+
+  // 2. Normalizar horas con minutos (ej. 5:30 -> five thirty, 6:15 -> six fifteen)
+  str = str.replace(/\b(\d{1,2}):(\d{2})\b/g, (match, hour, min) => {
+    return `${numberToWords(parseInt(hour, 10))} ${numberToWords(parseInt(min, 10))}`;
+  });
+
+  // 3. Convertir números enteros restantes (ej. 90 -> ninety, 21 -> twenty one)
   str = str.replace(/\b\d+\b/g, (match) => {
     return numberToWords(parseInt(match, 10));
   });
 
-  // 2. En caso de que queden dígitos sueltos pegados por guiones u otros símbolos
+  // 4. En caso de que queden dígitos sueltos pegados por guiones u otros símbolos
   const digitToWord = {
     '0': 'zero', '1': 'one', '2': 'two', '3': 'three', '4': 'four',
     '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine'
   };
   str = str.replace(/\d/g, (d) => ` ${digitToWord[d]} `);
 
-  // 3. Diccionario de equivalencias y pronunciaciones comunes
+  // 5. Diccionario de equivalencias, apóstrofes y pronunciaciones comunes
   const replacements = {
+    "o'clock": "o clock", "oclock": "o clock",
     "oh": "zero", "won": "one", "to": "two", "too": "two",
     "tree": "three", "for": "four", "fore": "four",
     "sixx": "six", "sex": "six", "ate": "eight",
@@ -238,7 +249,7 @@ function normalizeText(text) {
     "u": "you", "r": "are", "mornin": "morning"
   };
 
-  // 4. Limpieza final de caracteres especiales
+  // 6. Limpieza final de caracteres especiales (mantiene letras, números y espacios)
   str = str.replace(/[^a-z0-9\s]/g, ' ');
   let words = str.split(/\s+/).filter(Boolean).map(w => replacements[w] || w);
 
