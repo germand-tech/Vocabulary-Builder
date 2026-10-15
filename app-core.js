@@ -281,7 +281,7 @@ function isSpeechMatch(spoken, target) {
   const tNorm = normalizeText(target);
   if (!sNorm || !tNorm) return false;
   if (sNorm === tNorm) return true;
-  if (getSimilarity(sNorm, tNorm) >= 0.82) return true;
+  if (getSimilarity(sNorm, tNorm) >= 0.90) return true;
   const sWords = sNorm.split(' ').filter(Boolean);
   const tWords = tNorm.split(' ').filter(Boolean);
   if (Math.abs(sWords.length - tWords.length) > 1) return false;
@@ -289,9 +289,9 @@ function isSpeechMatch(spoken, target) {
   for (let i = 0; i < tWords.length; i++) {
     const tw = tWords[i];
     const sw = sWords[i];
-    if (sw && (sw === tw || getSimilarity(sw, tw) >= 0.82)) matchedPositionCount++;
+    if (sw && (sw === tw || getSimilarity(sw, tw) >= 0.90)) matchedPositionCount++;
   }
-  return (matchedPositionCount / tWords.length) >= 0.8;
+  return (matchedPositionCount / tWords.length) >= 0.9;
 }
 
 let activeSpeechInstance = null;
