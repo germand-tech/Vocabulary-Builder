@@ -249,7 +249,8 @@ function normalizeText(text) {
     "sixx": "six", "sex": "six", "ate": "eight",
     "ok": "okay", "im": "i am", "i'm": "i am", "mister": "mr",
     "missus": "mrs", "goodbye": "bye", "good-bye": "bye", "bye-bye": "bye",
-    "u": "you", "r": "are", "mornin": "morning"
+    "u": "you", "r": "are", "mornin": "morning",
+    "smokey": "smoky"
   };
 
   // 7. Limpieza final de caracteres especiales (mantiene letras, números y espacios)
